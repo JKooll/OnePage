@@ -1,11 +1,16 @@
 {
     "name": "jkol/onepage",
-	"licence": "MIT",
+	"license": "MIT",
     "authors": [
         {
             "name": "JKooll",
             "email": "jerryzhao1212@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "jkol\\": ""
+        }
+    }
 }

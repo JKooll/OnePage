@@ -1,6 +1,10 @@
 <?php 
-include_once "onepage.php";
+require_once "vendor/autoload.php";
 
-$var = "Hello World!";
+use jkol\o;
 
-dd($var);
+/**
+ * dd()
+ * expect file\path\to\onepage.php:17:string 'Hello World' (length=11)
+ */
+o::dd('Hello World');
