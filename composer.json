@@ -4,7 +4,8 @@
     "authors": [
         {
             "name": "JKooll",
-            "email": "jerryzhao1212@gmail.com"
+            "email": "jerryzhao1212@gmail.com",
+            "homepage": "https://jkooll.github.io",
         }
     ],
     "require": {
