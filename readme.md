@@ -15,3 +15,9 @@ The is a PHP library.
 - strfilter($str)
 
 - helloWorld()
+
+- cli_read()
+
+- cli_write()
+
+- toString()

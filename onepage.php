@@ -119,4 +119,55 @@ class onepage
     {
         echo 'Hello World';
     }
+
+    /**
+     * Read a line from cli
+     * 
+     * @param string $format Line string format
+     * @param boolean $first If true, just return first element, else return result array.
+     * 
+     * @return string|array
+     */
+    static function cli_read($format, $first)
+    {
+        $stdin = fopen('php://stdin', 'r');
+
+        $result = fscanf($stdin, $format);
+
+        if ($first) {
+            return empty($result[0]) ? '' : $result[0];
+        }
+
+        return $result;
+    }
+
+    /**
+     * write a string to cli
+     * 
+     * @param string $str The string will be write to cli
+     * 
+     * @return boolean 
+     */
+    static function cli_write($str)
+    {
+        if (gettype($str) != 'string') {
+            return false;
+        }
+
+        $stdout = fopen('php://stdout', 'w');
+
+        return fwrite($stdout, $str);
+    }
+
+    /**
+     * conver $var type to string
+     * 
+     * @param string $var The variable type will be change to string
+     * 
+     * @return string
+     */
+    static function toString($var)
+    {
+        return print_r($var, true);
+    }
 }
