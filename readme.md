@@ -16,8 +16,8 @@ The is a PHP library.
 
 - helloWorld()
 
-- cli_read()
+- cli_read($format, $first = false)
 
-- cli_write()
+- cli_write($str)
 
-- toString()
+- toString($var)

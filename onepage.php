@@ -128,7 +128,7 @@ class onepage
      * 
      * @return string|array
      */
-    static function cli_read($format, $first)
+    static function cli_read($format, $first = false)
     {
         $stdin = fopen('php://stdin', 'r');
 
