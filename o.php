@@ -4,8 +4,6 @@
  * @Date 2017-10-10 GMT+10
  */
 
-namespace jkol;
-
 class o extends onepage
 {
 

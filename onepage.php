@@ -10,6 +10,9 @@ class onepage
     /** 
      * Show variable.
      * 
+     * <code>
+     * onepage::dd('Hello World!');
+     * </code>
      * @param mix $var This variable will be showed.
      */
     static function dd($var)
@@ -19,8 +22,12 @@ class onepage
     }
 
     /**
-     * 返回两个字符串不同部分，从字符串第一个字符开始比较
+     * 返回两个字符串右侧不同部分，从字符串第一个字符开始比较
      * Reference：http://php.net/manual/zh/function.strstr.php
+     * 
+     * <code>
+     * onepage::strdiff('abcd', 'ab'); //-> 'cd'
+     * </code>
      * 
      * @param string $str1
      * @param string $str2
@@ -37,7 +44,9 @@ class onepage
 
         $start = stripos($str1, $str2);
 
-        return substr($str1, $start + strlen($str2));
+        $result_str = substr($str1, $start + strlen($str2));
+
+        return $result_str ? $result_str : '';
     }
 
     /** 
@@ -82,7 +91,7 @@ class onepage
     }
 
     /**
-     * 字符串过滤器
+     * 空格转换成下划线
      * 
      * @param string $str
      * 

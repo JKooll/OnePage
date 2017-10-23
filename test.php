@@ -1,10 +1,7 @@
 <?php 
 require_once "vendor/autoload.php";
 
-use jkol\o;
+//o::dd('Hello World');
 
-/**
- * dd()
- * expect file\path\to\onepage.php:17:string 'Hello World' (length=11)
- */
-o::dd('Hello World');
+$result = o::strdiff('', 'ab');
+o::dd($result);
