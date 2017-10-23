@@ -56,8 +56,10 @@ class onepage
      * 
      * @return boolean If true, print success else print fail.
      */
-    static function message($msg = '')
+    static function message($msg)
     {
+        $msg = empty($msg) ? '' : $msg;
+
         if(!is_string($msg)) {
             $msg = json_encode($msg);
         }
@@ -106,5 +108,15 @@ class onepage
         $str = htmlspecialchars($str);
 
         return $str;
+    }
+
+    /**
+     * Echo Hello World!
+     * 
+     * @return void
+     */
+    static function helloWorld()
+    {
+        echo 'Hello World';
     }
 }
