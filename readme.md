@@ -6,6 +6,7 @@ The is a PHP library.
 ## Usage
 ```php
 o::dd('Hello World!');
+```
 //string(12) "Hello World!" 
 
 ## Functions
