@@ -21,3 +21,5 @@ The is a PHP library.
 - cli_write($str)
 
 - toString($var)
+
+- swap($var1, $var2)

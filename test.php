@@ -1,7 +1,5 @@
 <?php 
 require_once "vendor/autoload.php";
 
-//o::dd('Hello World');
-
-$result = o::strdiff('', 'ab');
+$result = o::swap('hello', 'world');
 o::dd($result);

@@ -170,4 +170,23 @@ class onepage
     {
         return print_r($var, true);
     }
+
+    /**
+     * Swap $var1 and $var2 
+     * 
+     * @param $var1
+     * @param $var2 
+     * 
+     * @return array
+     */
+    static function swap($var1, $var2)
+    {
+        $temp = $var1;
+
+        $var1 = $var2;
+
+        $var2 = $temp;
+
+        return [$var1, $var2];
+    }
 }
