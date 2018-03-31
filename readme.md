@@ -1,12 +1,13 @@
 <h1><p align="center">One Page</p></h1>
 
 ## About One Page
-The is a PHP library.
+The is a PHP helper functions library.
 
 ## Usage
+### dd(variable)
 ```php
-o::dd('Hello World!');
-//string(12) "Hello World!"
+$var = 'Hello World!';
+o::dd($var); //string(12) "Hello World!"
 ```
 
 ## Functions
