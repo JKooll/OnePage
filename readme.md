@@ -30,3 +30,5 @@ o::dd($var); //string(12) "Hello World!"
 - toString($var)
 
 - swap($var1, $var2)
+
+- splitNum($num)

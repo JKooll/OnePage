@@ -189,4 +189,18 @@ class onepage
 
         return [$var1, $var2];
     }
+
+    /**
+     * Thousand Separator
+     * 
+     * @param $num
+     * 
+     * @return string
+     */
+    public function splitNum($num)
+    {
+        $num .= '';
+        
+        return strrev(implode(',', str_split(strrev($num), 3)));
+    }
 }
