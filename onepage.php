@@ -203,4 +203,31 @@ class onepage
         
         return strrev(implode(',', str_split(strrev($num), 3)));
     }
+
+    /**
+     * 查找函数文件位置
+     * 
+     * @param string|array $funcname 需要查找的函数名
+     * 
+     * @return string The result string.
+     */
+    function function_dump($funcname) 
+    {
+        try {
+            if(is_array($funcname)) {
+                $func = new ReflectionMethod($funcname[0], $funcname[1]);
+                $funcname = $funcname[1];
+            } else {
+                $func = new ReflectionFunction($funcname);
+            }
+        } catch (ReflectionException $e) {
+            return $e->getMessage();
+        }
+        $start = $func->getStartLine() - 1;
+        $end =  $func->getEndLine() - 1;
+        $filename = $func->getFileName();
+        return "function $funcname defined by $filename($start - $end)\n";
+    }
+    
+    
 }

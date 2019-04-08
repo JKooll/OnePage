@@ -4,31 +4,47 @@
 The is a PHP helper functions library.
 
 ## Usage
-### dd(variable)
+### dd($var)
 ```php
 $var = 'Hello World!';
 o::dd($var); //string(12) "Hello World!"
 ```
+## strdiff($str1, $str2)
 
-## Functions
-- dd($var)
+## message($msg = '')
 
-- strdiff($str1, $str2)
+## strtolowerplus($var)
 
-- message($msg = '')
+## strfilter($str)
 
-- strtolowerplus($var)
+## helloWorld()
 
-- strfilter($str)
+## cli_read($format, $first = false)
 
-- helloWorld()
+## cli_write($str)
 
-- cli_read($format, $first = false)
+## toString($var)
 
-- cli_write($str)
+## swap($var1, $var2)
 
-- toString($var)
+## splitNum($num)
 
-- swap($var1, $var2)
+## function_dump($funcname)
+```php
+function a() {}
 
-- splitNum($num)
+class b 
+{
+    public function f() 
+    {
+
+    }
+}
+
+function_dump('a');
+
+function_dump(array('b', 'f'));
+
+$b = new b();
+function_dump(array($b, 'f'));
+```
