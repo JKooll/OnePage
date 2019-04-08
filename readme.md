@@ -41,10 +41,10 @@ class b
     }
 }
 
-function_dump('a');
+o::function_dump('a');
 
-function_dump(array('b', 'f'));
+o::function_dump(array('b', 'f'));
 
 $b = new b();
-function_dump(array($b, 'f'));
+o::function_dump(array($b, 'f'));
 ```
